@@ -1,0 +1,71 @@
+/* Who are the top 10 artists with the most records sold? */
+SELECT
+  Album.Title, Artist.Name, count(Invoice.InvoiceId) as copies_sold
+FROM Invoice
+JOIN InvoiceLine
+  ON InvoiceLine.InvoiceId = Invoice.InvoiceId
+JOIN Track
+  ON Track.TrackId = InvoiceLine.TrackId
+JOIN Album
+  ON Track.AlbumId = Album.AlbumId
+JOIN Artist
+  ON Album.ArtistId = Artist.ArtistId
+Group by Album.Title
+Order BY copies_sold DESC
+LIMIT 10;
+
+/* Which music genre has the longest average length per song? */
+
+Select 
+	Genre.Name, Avg(Track.Milliseconds)/60000 as Average_Length_in_Minutes
+From Track
+Join Genre
+	On Genre.GenreId = 	Track.GenreId
+WHERE 
+	Genre.Name != 'Sci Fi & Fantasy' and 
+	Genre.Name != 'Science Fiction' and
+	Genre.Name != 'Drama' and
+	Genre.Name != 'TV Shows' and
+	Genre.Name != 'Comedy'  
+Group by Genre.Name
+Order by Average_Length_in_Minutes DESC
+;
+
+/* What are the top 10 cities that  bought the most rock music copies? */
+Select Customer.City, count(Invoice.InvoiceID) as Rock_Music_Copies
+
+FROM Customer
+
+JOIN Invoice
+	On Customer.CustomerId = Invoice.CustomerId
+	
+JOIN InvoiceLine
+  ON InvoiceLine.InvoiceId = Invoice.InvoiceId
+  
+JOIN Track
+  ON Track.TrackId = InvoiceLine.TrackId
+  
+JOIN Genre
+  ON Track.GenreId = Genre.GenreId
+  
+Where Genre.Name = 'Rock'
+
+Group BY Customer.City
+Order by Rock_Music_Copies DESC
+limit 10;
+
+
+
+/* What are the top 10 track and its composer to be featured in the most playlists? */
+
+Select track.Name, track.Composer, count(PlaylistID) Times_Featured
+
+From Track
+
+Join PlaylistTrack
+on Track.TrackID = PlaylistTrack.TrackId
+Where track.Composer IS NOT NULL
+Group by track.Composer
+Order by Times_Featured Desc
+LIMIT 10
+;
