@@ -13,6 +13,6 @@ The [data](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Proj
 
 ![alt text](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/queries_pic.JPG)
 
-### Task #2: Create [visualizations](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/graphs.xlsx) and [explanations](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/presentation.pdf)
+### Task #2: Create [visualizations](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/graphs.xlsx) and [explanations](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/presentation.pdf) for each query.
 
 ![alt text](https://github.com/jmt7080/Business_Analyst_Nanodegree/blob/main/Project%203%20Query%20a%20Digital%20Music%20Store%20Database/presentation_pic.JPG)
